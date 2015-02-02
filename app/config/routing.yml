@@ -1,0 +1,11 @@
+job:
+    resource: "@JobBundle/Resources/config/routing.yml"
+    prefix:   /
+
+crawler:
+    resource: "@CrawlerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
