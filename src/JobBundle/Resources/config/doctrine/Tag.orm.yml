@@ -1,0 +1,11 @@
+JobBundle\Entity\Tag:
+    type: entity
+    table: tag
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 250
