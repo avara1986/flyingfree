@@ -39,7 +39,7 @@ JobBundle\Entity\Job:
         tags:
             targetEntity: Tag
             joinTable:
-                name: job_tags
+                name: job_tag
                 joinColumns:
                     job_id:
                         referencedColumnName: id

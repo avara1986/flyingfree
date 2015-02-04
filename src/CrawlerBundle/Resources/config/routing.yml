@@ -1,6 +1,6 @@
 crawler_homepage:
     path:     /hello/{name}
     defaults: { _controller: CrawlerBundle:Default:index }
-crawler_url:
-    path:     /url/{name}
-    defaults: { _controller: CrawlerBundle:Default:getUrl }
+crawler_search_info_jobs:
+    path:     /search-jobs/info-jobs
+    defaults: { _controller: CrawlerBundle:Default:infoJobsJobs }
