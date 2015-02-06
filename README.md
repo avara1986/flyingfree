@@ -92,11 +92,17 @@ Or when clone a existing repo.
 
 
 Create getters and setters
--------------
+--------------------------
 
 ::
 
-    app/console doctrine:generate:entities [MyBulde]/entity/Object
+    app/console doctrine:generate:entities [MyBulde]/Entity/Object
+
+Load Fixtures
+-------------
+
+::
+    app/console doctrine:fixtures:load
 
 Others
 ======

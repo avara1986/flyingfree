@@ -37,6 +37,7 @@ class Job
     public function __construct()
     {
         $this->tags = new ArrayCollection();
+        $this->updatedTimestamps();
     }
     /**
      * Now we tell doctrine that before we persist or update we call the updatedTimestamps() function.
@@ -57,7 +58,7 @@ class Job
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -80,7 +81,7 @@ class Job
     /**
      * Get created
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreated()
     {
@@ -103,7 +104,7 @@ class Job
     /**
      * Get lastUpdated
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getLastUpdated()
     {
@@ -126,7 +127,7 @@ class Job
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -149,7 +150,7 @@ class Job
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -172,7 +173,7 @@ class Job
     /**
      * Get url
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
@@ -195,7 +196,7 @@ class Job
     /**
      * Get urlPath
      *
-     * @return string 
+     * @return string
      */
     public function getUrlPath()
     {
@@ -218,7 +219,7 @@ class Job
     /**
      * Get typeContract
      *
-     * @return string 
+     * @return string
      */
     public function getTypeContract()
     {
@@ -241,7 +242,7 @@ class Job
     /**
      * Get salary
      *
-     * @return string 
+     * @return string
      */
     public function getSalary()
     {
@@ -264,7 +265,7 @@ class Job
     /**
      * Get accepted
      *
-     * @return integer 
+     * @return integer
      */
     public function getAccepted()
     {
@@ -287,7 +288,7 @@ class Job
     /**
      * Get rank
      *
-     * @return integer 
+     * @return integer
      */
     public function getRank()
     {
@@ -320,7 +321,7 @@ class Job
     /**
      * Get tags
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getTags()
     {

@@ -16,6 +16,7 @@ JobBundle\Entity\Job:
             length: 250
         description:
             type: text
+            nullable: TRUE
         url:
             type: string
             length: 250
@@ -31,6 +32,7 @@ JobBundle\Entity\Job:
             type: decimal
             precision: 10
             scale: 2
+            nullable: true
         accepted:
             type: integer
         rank:
