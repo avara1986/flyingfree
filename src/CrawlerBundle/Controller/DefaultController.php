@@ -21,8 +21,6 @@ class DefaultController extends Controller
         $this->taglist = $tags->findAll();
         $client = new Client();
         $num_tags = count($this->taglist);
-        //dump($taglist[1]);
-        //die();
         for($i=0;$i<$num_tags;$i++){
             $this->pos = $i;
             $this->tag = $this->taglist[$this->pos]->getName();
@@ -33,7 +31,6 @@ class DefaultController extends Controller
                 $patron = '/'.$this->tag.'/i';
                 $coincidencias = array();
                 preg_match($patron, $node->text(), $coincidencias, PREG_OFFSET_CAPTURE);
-                    //print $node->text() . "<br>";
                     if(count($coincidencias)){
                         $checkjob = $this->getDoctrine()->getRepository('JobBundle:Job');
                         $checkjoblist = $checkjob->findBy(array('urlPath' => 'https:'.$node->filter('h2 a')->attr('href')));
