@@ -11,7 +11,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $jobs = $this->getDoctrine()->getRepository('JobBundle:Job');
-        $this->taglist = $jobs->findAll();
-        return $this->render('JobBundle:Default:index.html.twig', array('name' => $name));
+        $this->joblist = $jobs->findAll();
+        return $this->render('JobBundle:Default:index.html.twig', array('jobs' => $this->joblist));
     }
 }
