@@ -1,3 +1,9 @@
 job_homepage:
     path:     /
     defaults: { _controller: JobBundle:Default:index }
+job_tag:
+    path:     /tags/
+    defaults: { _controller: JobBundle:Default:taglist }
+job_tag_create:
+    path:     /tags/create
+    defaults: { _controller: JobBundle:Default:tagCreate }
