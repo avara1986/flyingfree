@@ -2,3 +2,8 @@ services:
 #    job.example:
 #        class: JobBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+    tags.tags_listener:
+        class: JobBundle\Event\TagListener
+        arguments: [@logger]
+        tags:
+            - {name: kernel.event_listener, event: tag.create, method: onTagCreate}

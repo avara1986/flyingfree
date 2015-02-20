@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use JobBundle\Entity\Tag;
 use JobBundle\Entity\Job;
+use JobBundle\Event\TagEvent;
 
 class DefaultController extends Controller
 {
@@ -38,6 +39,7 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($tag);
             $em->flush();
+            $this->get('event_dispatcher')->dispatch('tag.create', new TagEvent($tag));
         }
 
         return $this->render('JobBundle:Default:tag_create.html.twig', array(

@@ -24,7 +24,23 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
-
+# Monolog Configuration
+monolog:
+    handlers:
+        applog:
+            type: stream
+            path: /var/www/log/flyingfree.log
+            level: info
+        main:
+            type: fingers_crossed
+            action_level: warning
+            handler: file
+        file:
+            type: stream
+            level: debug
+        syslog:
+            type: syslog
+            level: error
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
