@@ -11,17 +11,17 @@ security:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
             security: false
 
-        secured_area:
+        crawler_area:
             pattern: ^/
             anonymous: ~
-            http_basic:
-                realm: "Tags"
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout: ~
 
         default:
             anonymous: ~
-        
 
-    
     access_control:
         - { path: ^/tags, roles: ROLE_ADMIN }
 
