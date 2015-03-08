@@ -25,4 +25,7 @@ UserBundle\Entity\User:
         roles:
             type: string
             length: '255'
+        isActive:
+            type: boolean
+            column: is_active
     lifecycleCallbacks: {  }

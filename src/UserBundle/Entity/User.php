@@ -3,13 +3,12 @@
 namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
-use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 //INSERT INTO `test_flying_free`.`User` (`id`, `email`, `username`, `password`, `salt`) VALUES (NULL, 'a.vara.1986@gmail.com', 'alberto', SHA1('1234'), '');
 /**
  * User
  */
-class User implements UserInterface
+class User implements AdvancedUserInterface
 {
     /**
      * @var integer
@@ -40,6 +39,11 @@ class User implements UserInterface
      * @var string
      */
     private $roles = "";
+
+    /**
+     * @var bool
+     */
+    private $isActive;
 
     /**
      * Get id
@@ -160,12 +164,52 @@ class User implements UserInterface
     {
         return explode(' ', $this->roles);
     }
+    /**
+     * Set username
+     *
+     * @param string $username
+     * @return User
+     */
+     public function setIsActive($isActive)
+     {
+         $this->isActive = $isActive;
 
+         return $this;
+     }
+
+     /**
+      * Get username
+      *
+      * @return string
+      */
+     public function getIsActive()
+     {
+         return $this->isActive;
+     }
     /**
      * Erase Credentials
      */
     public function eraseCredentials()
     {
 
+    }
+    public function isAccountNonExpired()
+    {
+        return true;
+    }
+
+    public function isAccountNonLocked()
+    {
+        return true;
+    }
+
+    public function isCredentialsNonExpired()
+    {
+        return true;
+    }
+
+    public function isEnabled()
+    {
+        return $this->isActive;
     }
 }
