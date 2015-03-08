@@ -105,7 +105,7 @@ class User implements UserInterface
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = sha1($password);
 
         return $this;
     }
@@ -142,14 +142,23 @@ class User implements UserInterface
     {
         return $this->salt;
     }
+    /**
+     * set Roles
+     * @return User
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles[0];
 
+        return $this;
+    }
     /**
      * Get Roles
      * @return multitype:string
      */
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return explode(' ', $this->roles);
     }
 
     /**

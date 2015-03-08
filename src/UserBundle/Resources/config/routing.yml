@@ -1,3 +1,3 @@
 user_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: UserBundle:Default:index }
+    path:     /users/create
+    defaults: { _controller: UserBundle:Default:userCreate }

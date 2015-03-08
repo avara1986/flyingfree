@@ -22,4 +22,7 @@ UserBundle\Entity\User:
         salt:
             type: string
             length: '64'
+        roles:
+            type: string
+            length: '255'
     lifecycleCallbacks: {  }

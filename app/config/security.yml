@@ -18,6 +18,7 @@ security:
 
     access_control:
         - { path: ^/tags, roles: ROLE_USER }
+        - { path: ^/users, roles: ROLE_ADMIN }
 
     encoders:
         UserBundle\Entity\User:
