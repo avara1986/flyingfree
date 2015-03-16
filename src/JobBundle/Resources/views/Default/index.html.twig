@@ -5,7 +5,8 @@
         <div class="col-md-4">
           <h2>{{ job.title }}</h2>
           <p>{{ job.description }}</p>
-          <p><a class="btn btn-default" href="{{ job.urlpath }}" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{ job.urlpath }}" role="button">
+          {% trans %}Ver en detalle{% endtrans %} &raquo;</a></p>
         </div>
         {% endfor %}
 </div>

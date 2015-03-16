@@ -5,8 +5,10 @@ login_check:
     path:     /login_check
     defaults: { _controller: JobBundle:Default:index }
 job_homepage:
-    path:     /
-    defaults: { _controller: JobBundle:Default:index }
+    path:     /{_locale}/
+    defaults: { _controller: JobBundle:Default:index, _locale: es }
+    requirements:
+        _locale: es|en
 job_tag:
     path:     /tags/
     defaults: { _controller: JobBundle:Default:taglist }
