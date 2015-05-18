@@ -1,13 +1,9 @@
-.. contents::
-
 ======
 Flying Free
 ======
 
 Information
 ===========
-
-Flying Free is a Job Finder
 
 ::
 
@@ -41,7 +37,7 @@ Create project
 
 ::
 
-    composer create-project symfony/framekwork-standard-edition [PROJECT-NAME]
+    composer create-project symfony/framework-standard-edition [PROJECT-NAME]
 
 Virtual Server
 --------------
